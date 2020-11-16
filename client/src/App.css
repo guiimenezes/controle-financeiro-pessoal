@@ -1,0 +1,39 @@
+.list{
+  display:flex;
+  flex-direction: column;
+}
+
+.list li{
+  margin: 5px 0;
+  border:1px solid #c0c0c0;
+  border-radius:5px;
+  padding:5px; 
+  flex-direction: row;
+  display:flex;
+}
+
+.colunaSm{
+  flex-direction: row;
+  margin: 0 5px;
+  width: 15%;
+}
+
+.colunaMd{
+  flex-direction: row;
+  margin: 0 5px;
+  width: 15%;
+}
+
+.colunaLg{
+  flex-direction: row;
+  margin: 0 5px;
+  width: 55%;
+}
+
+.valor{
+  font-size: 1.2rem;
+}
+
+.botao:hover{
+  cursor:pointer
+}
