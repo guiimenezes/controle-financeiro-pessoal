@@ -19,7 +19,7 @@ export default function ListaFinancas(props) {
           }
           return (
             <li key={dado._id} style={style.lista}>
-              <div className="colunaSm"><span>{dado.day}</span></div>
+              <div className="colunaSm"><span><strong style={{ "fontSize": "1.3rem" }}>{dado.day}</strong></span></div>
               <div className="colunaLg">
                 <span>
                   <strong>{dado.category}</strong><br />
@@ -28,8 +28,8 @@ export default function ListaFinancas(props) {
               </div>
               <div className="colunaMd valor"><span><strong>R$ {dado.value}</strong></span></div>
               <div className="colunaSm">
-                <i className="material-icons botao" onClick={() => props.onClick(dado._id)}>edit</i>
-                <i><i className="material-icons botao" onClick={() => props.onDelete(dado._id, dado.yearMonth)}>delete</i></i>
+                <i className="material-icons botao" onClick={() => props.onClick(dado._id)} title={`Editar ${dado.category}`}>edit</i>
+                <i><i className="material-icons botao" onClick={() => props.onDelete(dado._id, dado.yearMonth)} title={`Excluir ${dado.category}`}>delete</i></i>
               </div>
             </li>
           )
