@@ -1,4 +1,5 @@
 import React from 'react'
+import { formatReal } from '../helpers/formatReal'
 
 export default function ListaFinancas(props) {
   const dados = props.information
@@ -26,7 +27,7 @@ export default function ListaFinancas(props) {
                   {dado.description}
                 </span>
               </div>
-              <div className="colunaMd valor"><span><strong>R$ {dado.value}</strong></span></div>
+              <div className="colunaMd valor"><span><strong>{formatReal(dado.value)}</strong></span></div>
               <div className="colunaSm">
                 <i className="material-icons botao" onClick={() => props.onClick(dado._id)} title={`Editar ${dado.category}`}>edit</i>
                 <i><i className="material-icons botao" onClick={() => props.onDelete(dado._id, dado.yearMonth)} title={`Excluir ${dado.category}`}>delete</i></i>

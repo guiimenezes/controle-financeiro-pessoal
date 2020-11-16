@@ -12,9 +12,9 @@ export default function NovoLancamentoEFiltro(props) {
   }
 
   return (
-    <div>
-      <div><button className="btn" onClick={clicaAbreModal}>+ Novo Lançamento</button></div>
-      <div><input type="text" name="filtro" placeholder="Filtro" value={props.txtBusca} onChange={busca}></input></div>
+    <div className="campoLancamento">
+      <div className="btnNew"><button className="btn" onClick={clicaAbreModal}>+ Novo Lançamento</button></div>
+      <div className="filtro"><input type="text" name="filtro" placeholder="Filtro" value={props.txtBusca} onChange={busca}></input></div>
     </div>
   )
 }

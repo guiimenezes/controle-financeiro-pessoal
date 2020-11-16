@@ -1,4 +1,5 @@
 import React from 'react'
+import { formatReal } from '../helpers/formatReal'
 
 export default function Infos({ information }) {
   // console.log(information.length)
@@ -17,12 +18,13 @@ export default function Infos({ information }) {
   const style = {
     verde: {
       color: "green",
-      fontSize: "1.3rem",
+      backgroundColor: "#cfcfc3",
+      padding: "5px",
       fontWeight: "bold"
     },
     vermelho: {
       color: "red",
-      fontSize: "1.3rem",
+      backgroundColor: "#c3c3c3",
       fontWeight: "bold"
     }
   }
@@ -36,17 +38,17 @@ export default function Infos({ information }) {
       </div>
       <div className="receitas">
         <span>
-          <strong>Receitas:  <span className="colorGreen">R$ {receita}</span></strong>
+          <strong>Receitas:  <span className="colorGreen">{formatReal(receita)}</span></strong>
         </span>
       </div>
       <div className="despesas">
         <span>
-          <strong>Despesas:  <span className="colorRed">R$ {despesa}</span></strong>
+          <strong>Despesas:  <span className="colorRed"> {formatReal(despesa)}</span></strong>
         </span>
       </div>
       <div className="saldos">
         <span>
-          <strong>Saldo:  <span style={saldo >= 0 ? style.verde : style.vermelho}>R$ {saldo}</span></strong>
+          <strong>Saldo:  <span style={saldo >= 0 ? style.verde : style.vermelho}>{formatReal(saldo)}</span></strong>
         </span>
       </div>
     </div>

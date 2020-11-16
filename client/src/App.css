@@ -1,6 +1,9 @@
-.infos{
+.infos, .campoLancamento{
   display:flex
 }
+.btnNew{ margin: 10px 10px 0 0}
+
+.filtro{ width: 500px;}
 
 .lancamentos{ 
   width: 25%; 
@@ -64,7 +67,8 @@
 }
 
 .valor{
-  font-size: 1.2rem;
+  font-size: 1.0rem;
+  font-weight: bold;
 }
 
 .botao:hover{

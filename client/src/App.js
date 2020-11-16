@@ -96,8 +96,7 @@ export default function App() {
       yearMonth: mesAno,
       yearMonthDay: preencheModal.yearMonthDay
     }
-    console.log(dia, mes, ano)
-    console.log(data)
+
     if (modalIsOpen === true && statusBtn === 'Salvar') {
       TransactionService.update(preencheModal._id, data).then(response => {
         setPreencheModal({
@@ -146,8 +145,8 @@ export default function App() {
   return (
     <div className="container">
 
-      <h5>Desafio Final do Bootcamp Full Stack</h5>
-      <h6>Controle Financeiro Pessoal</h6>
+      <h5 style={{ "textAlign": "center" }}>Desafio Final do Bootcamp Full Stack</h5>
+      <h6 style={{ "textAlign": "center" }}>Controle Financeiro Pessoal</h6>
       <CampoSelect dados={inputSelect} retornaTransaction={reloadTransaction} />
       <Infos information={transaction} />
       <NovoLancamentoEFiltro onClick={modalCadastra} pesquisa={searchName} txtBusca={busca} />
